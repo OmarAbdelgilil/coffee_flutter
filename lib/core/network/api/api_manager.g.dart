@@ -10,7 +10,7 @@ part of 'api_manager.dart';
 
 class _ApiManager implements ApiManager {
   _ApiManager(this._dio, {this.baseUrl, this.errorLogger}) {
-    baseUrl ??= 'http://192.168.1.60:3001/api';
+    baseUrl ??= 'https://coffe-back.onrender.com/api';
   }
 
   final Dio _dio;

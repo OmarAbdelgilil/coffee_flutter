@@ -14,7 +14,7 @@ class IngredientListItem extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        if (ing.ingTotalWeight == 0)
+        if (ing.ingTotalWeight == 0 || ing.maxOrder! > 45)
           Container(
             width: MediaQuery.of(context).size.width - 30,
             height: 25,
@@ -31,7 +31,9 @@ class IngredientListItem extends StatelessWidget {
                 Icon(Icons.warning_rounded, color: Colors.red, size: 15),
                 SizedBox(width: 2),
                 Text(
-                  "This Ingredient Out of stock please need to urjent order",
+                  ing.ingTotalWeight == 0
+                      ? "This Ingredient Out of stock please need to urjent order"
+                      : "Less than 5 in stock need to urjent order",
                   style: TextStyle(color: Colors.red, fontSize: 12),
                 ),
               ],

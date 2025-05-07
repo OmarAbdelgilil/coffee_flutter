@@ -1,5 +1,5 @@
 class ApiConstants {
-  static const String baseUrl = "http://192.168.1.60:3001/api";
+  static const String baseUrl = "https://coffe-back.onrender.com/api";
   static const String registerPath = "/register";
   static const String loginPath = "/login";
   static const String revenuePath = "/revenue/todayRevnueAndExpenses";
